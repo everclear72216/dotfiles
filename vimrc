@@ -5,3 +5,6 @@ set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports it)
 set t_Co=256
+
+" Always show line numbers
+set number
