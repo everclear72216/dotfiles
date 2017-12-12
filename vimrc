@@ -8,3 +8,7 @@ set t_Co=256
 
 " Always show line numbers
 set number
+
+" Open NERDTree when opening a directory
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0]
