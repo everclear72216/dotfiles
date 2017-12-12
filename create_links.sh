@@ -1,3 +1,6 @@
 #! /bin/bash
 
-ln -s $(pwd)/zshrc ~/.zshrc
+ln -sf $(pwd)/zshrc ~/.zshrc
+ln -sf $(pwd)/vimrc ~/.vimrc
+ln -sf $(pwd)/profile ~/.profile
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
