@@ -3,6 +3,8 @@
 PACKAGES="
 zsh
 tmux
+tree
+stterm
 vim-nox
 realpath
 python3-pip
@@ -19,8 +21,8 @@ vimrc
 fonts
 profile
 tmux.conf
-local/share/applications/simple-terminal.desktop
 local/bin/stterm_launcher
+local/share/applications/simple-terminal.desktop
 "
 echo "Preparing your environment..."
 echo ""
@@ -61,4 +63,9 @@ for FILE in ${REPLACEMENTS}
         echo ""
     done
 
+echo "Configuring Suckless Terminal..."
+echo ""
 gsettings set org.gnome.desktop.default-applications.terminal exec 'stterm_launcher'
+echo "Configuring Powerline for ZSH..."
+echo ""
+chmod +x ${HOME}/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
