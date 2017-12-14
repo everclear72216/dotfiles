@@ -1,4 +1,5 @@
 set rtp+=$HOME/.local/lib/python3.5/site-packages/powerline/bindings/vim
+set rtp+=$HOME/.vim/bundle/nerdtree
 
 " Always show statusline
 set laststatus=2

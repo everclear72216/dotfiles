@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Simple Terminal
+GenericName=Terminal
+Comment=standard terminal emulator for the X window system
+Exec=bash -c 'cd $HOME && stterm -T "Suckless Terminal" -f "Ubuntu Mono derivative Powerline:style=Normal:size=12" -g "80x24" -e tmux'
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Icon=terminal
+Categories=System;TerminalEmulator;
+Keywords=shell;prompt;command;commandline;cmd;

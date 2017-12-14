@@ -1,0 +1,8 @@
+#! /bin/bash
+
+STTERM_TITLE="Suckless Terminal"
+STTERM_FONT="Ubuntu Mono derivative Powerline:style=Normal:size=12"
+STTERM_GEOMETRY=80x24
+STTERM_EXECUTE=tmux
+
+cd $HOME && stterm -T "${STTERM_TITLE}" -f "${STTERM_FONT}" -g "${STTERM_GEOMETRY}" -e "${STTERM_EXECUTE}"

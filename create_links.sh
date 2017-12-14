@@ -16,26 +16,32 @@ REPLACEMENTS="
 vim
 zshrc
 vimrc
+fonts
 profile
 tmux.conf
+local/share/applications/simple-terminal.desktop
+local/bin/stterm_launcher
 "
-
+echo "Preparing your environment..."
+echo ""
 echo "Installing required packages..."
+echo ""
 sudo apt-get install ${PACKAGES} &> /dev/null
 
 SCRIPT="$(realpath $0)"
 SCRIPTPATH="$(dirname $SCRIPT)"
 echo "Script location: ${SCRIPTPATH}"
+echo ""
 
 echo "Installing powerline..."
+echo ""
 pip3 install --user ${PYTHON_PACKAGES} &> /dev/null
 
-echo "Removing files and folders to be replaced..."
-for FIL in ${REPLACEMENTS}
+for FILE in ${REPLACEMENTS}
     do
         RECURSIVE=
-        DESTINATION="~/.${FIL}"
-        SOURCE="${SCRIPTPATH}/${FIL}"
+        DESTINATION="${HOME}/.${FILE}"
+        SOURCE="${SCRIPTPATH}/${FILE}"
  
         if [ -d "${SOURCE}" ]
             then
@@ -45,8 +51,14 @@ for FIL in ${REPLACEMENTS}
         echo "Removing existing file or directory: ${DESTINATION}"
         rm -${RECURSIVE}f "${DESTINATION}"
 
-        echo "Creating symbolic link: ${DESTINATION} -> ${SOURCE}"
-        ln -sf "${DESTINATION}" "${SOURCE}"
+        DESTDIR=$(dirname "${DESTINATION}")
+        echo "Creating destination directory if missing: ${DESTDIR}"
+	mkdir -p "${DESTDIR}"
 
+        echo "Creating symbolic link: ${DESTINATION} -> ${SOURCE}"
+        ln -sf "${SOURCE}" "${DESTINATION}"
+
+        echo ""
     done
 
+gsettings set org.gnome.desktop.default-applications.terminal exec 'stterm_launcher'
