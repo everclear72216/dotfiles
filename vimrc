@@ -1,4 +1,16 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=$HOME/.local/lib/python3.5/site-packages/powerline/bindings/vim
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+
+filetype plugin indent on
 
 " Always show statusline
 set laststatus=2
@@ -9,6 +21,3 @@ set t_Co=256
 " Always show line numbers
 set number
 
-" Open NERDTree when opening a directory
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0]

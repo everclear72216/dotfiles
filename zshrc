@@ -40,3 +40,5 @@ HYPHEN_INSENSITIVE="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
+alias ll='ls -l'
+alias la='ls -all'
