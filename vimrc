@@ -28,3 +28,7 @@ onoremap <Tab> <Esc>
 cnoremap <Tab> <C-C><Esc>
 inoremap <Tab> <Esc>
 inoremap <Leader><Tab> <Tab>
+
+" Highlight overlength lines
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
