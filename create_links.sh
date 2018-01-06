@@ -11,6 +11,7 @@ python3-pip
 "
 
 PYTHON_PACKAGES="
+powerline-shell
 powerline-status
 "
 
@@ -21,6 +22,7 @@ vimrc
 fonts
 profile
 tmux.conf
+powerline-shell.json
 local/bin/stterm_launcher
 local/share/applications/simple-terminal.desktop
 "
@@ -66,6 +68,3 @@ for FILE in ${REPLACEMENTS}
 echo "Configuring Suckless Terminal..."
 echo ""
 gsettings set org.gnome.desktop.default-applications.terminal exec 'stterm_launcher'
-echo "Configuring Powerline for ZSH..."
-echo ""
-chmod +x ${HOME}/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh

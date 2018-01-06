@@ -1,0 +1,9 @@
+{
+  "theme": "default",
+  "segments": [
+    "hostname",
+    "git",
+    "cwd",
+    "jobs"
+  ]
+}
