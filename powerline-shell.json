@@ -2,8 +2,8 @@
   "theme": "default",
   "segments": [
     "hostname",
-    "git",
     "cwd",
+    "git",
     "jobs"
   ]
 }
