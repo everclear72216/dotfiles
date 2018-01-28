@@ -22,6 +22,7 @@ vimrc
 fonts
 profile
 tmux.conf
+config/i3/config
 powerline-shell.json
 local/bin/stterm_launcher
 local/share/applications/simple-terminal.desktop
