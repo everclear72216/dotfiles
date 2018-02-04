@@ -9,19 +9,18 @@ SCRIPTPATH="$(dirname $SCRIPT)"
 set -e
 
 echo "Installing required deb-packages..."
-
-sudo ${SCRIPTPATH}/install_deb.sh 
+. ${SCRIPTPATH}/install_deb.sh
+wait
 
 echo "Installing required pip-packages..."
-
-${SCRIPTPATH}/install_python.sh 
+. ${SCRIPTPATH}/install_python.sh
 
 echo "Setting up symlinks..."
-${SCRIPTPATH}/create_links.sh
+. ${SCRIPTPATH}/create_links.sh
 
 echo "Configuring environment..."
+. ${SCRIPTPATH}/do_configure.sh
 
-${SCRIPTPATH}/do_configure.sh
-
+echo ""
 echo "Done!"
 echo ""

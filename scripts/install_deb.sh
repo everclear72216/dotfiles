@@ -6,14 +6,12 @@ PACKAGES="
 zsh
 tmux
 tree
+ranger
 stterm
 vim-nox
 realpath
 python3-pip
 "
 
-echo "Installing required packages..."
-echo ""
-
-apt-get install ${PACKAGES} &> /dev/null
+sudo apt-get -y install ${PACKAGES} &> /dev/null
 

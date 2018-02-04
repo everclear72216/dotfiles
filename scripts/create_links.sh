@@ -33,16 +33,11 @@ for FILE in ${REPLACEMENTS}
                 RECURSIVE=r
         fi
 
-        echo "Removing existing file or directory: ${DESTINATION}"
         rm -${RECURSIVE}f "${DESTINATION}"
 
         DESTDIR=$(dirname "${DESTINATION}")
-        echo "Creating destination directory if missing: ${DESTDIR}"
         mkdir -p "${DESTDIR}"
 
-        echo "Creating symbolic link: ${DESTINATION} -> ${SOURCE}"
         ln -sf "${SOURCE}" "${DESTINATION}"
-
-        echo ""
     done
 
