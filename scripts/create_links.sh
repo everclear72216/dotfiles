@@ -1,6 +1,5 @@
 #! /bin/sh
 
-
 REPLACEMENTS="
 vim
 zshrc
@@ -8,6 +7,7 @@ vimrc
 fonts
 profile
 tmux.conf
+gnupg/gpg.conf
 config/i3/config
 config/powerline
 powerline-shell.json
