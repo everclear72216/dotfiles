@@ -3,22 +3,25 @@
 echo "Setting up your config files..."
 echo ""
 
+SCRIPT="$(realpath $0)"
+SCRIPTPATH="$(dirname $SCRIPT)"
+
 set -e
 
 echo "Installing required deb-packages..."
 
-./install_deb.sh
+${SCRIPTPATH}/install_deb.sh
 
 echo "Installing required pip-packages..."
 
-./install_python.sh
+${SCRIPTPATH}/install_python.sh
 
 echo "Setting up symlinks..."
-./create_links.sh
+${SCRIPTPATH}/create_links.sh
 
 echo "Configuring environment..."
 
-./do_configure.sh
+${SCRIPTPATH}/do_configure.sh
 
 echo "Done!"
 echo ""
