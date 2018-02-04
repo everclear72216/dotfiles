@@ -10,11 +10,11 @@ set -e
 
 echo "Installing required deb-packages..."
 
-sudo ${SCRIPTPATH}/install_deb.sh &> /dev/null
+sudo ${SCRIPTPATH}/install_deb.sh 
 
 echo "Installing required pip-packages..."
 
-${SCRIPTPATH}/install_python.sh &> /dev/null
+${SCRIPTPATH}/install_python.sh 
 
 echo "Setting up symlinks..."
 ${SCRIPTPATH}/create_links.sh
