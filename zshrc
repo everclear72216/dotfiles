@@ -24,3 +24,5 @@ zstyle ':completion:complete:*:git:*' ignored-patterns 'check*-*'
 
 alias ll='ls -l'
 alias la='ls -all'
+
+alias git='GPG_TTY=$(tty) && git'

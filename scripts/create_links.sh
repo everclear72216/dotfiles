@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 REPLACEMENTS="
 vim
 zshrc
@@ -24,7 +26,7 @@ for FILE in ${REPLACEMENTS}
     do
         RECURSIVE=
         DESTINATION="${HOME}/.${FILE}"
-        SOURCE="${SCRIPTPATH}/${FILE}"
+        SOURCE="${SCRIPTPATH}/../${FILE}"
  
         if [ -d "${SOURCE}" ]
             then

@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 PYTHON_PACKAGES="powerline-shell powerline-status"
 
 echo "Installing python packages..."

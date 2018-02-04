@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 PACKAGES="
 zsh
 tmux
@@ -13,5 +15,5 @@ python3-pip
 echo "Installing required packages..."
 echo ""
 
-sudo apt-get install ${PACKAGES} &> /dev/null
+apt-get install ${PACKAGES} &> /dev/null
 
