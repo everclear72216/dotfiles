@@ -4,3 +4,5 @@ if [ -d "$HOME/.local/bin" ]
 fi
 
 export TERMINAL=stterm_launcher
+
+export GPG_TTY=$(tty)

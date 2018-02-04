@@ -1,19 +1,5 @@
-#! /bin/bash
+#! /bin/sh
 
-PACKAGES="
-zsh
-tmux
-tree
-stterm
-vim-nox
-realpath
-python3-pip
-"
-
-PYTHON_PACKAGES="
-powerline-shell
-powerline-status
-"
 
 REPLACEMENTS="
 vim
@@ -30,20 +16,9 @@ config/i3status/config
 local/bin/stterm_launcher
 local/share/applications/simple-terminal.desktop
 "
-echo "Preparing your environment..."
-echo ""
-echo "Installing required packages..."
-echo ""
-sudo apt-get install ${PACKAGES} &> /dev/null
 
 SCRIPT="$(realpath $0)"
 SCRIPTPATH="$(dirname $SCRIPT)"
-echo "Script location: ${SCRIPTPATH}"
-echo ""
-
-echo "Installing powerline..."
-echo ""
-pip3 install --user ${PYTHON_PACKAGES} &> /dev/null
 
 for FILE in ${REPLACEMENTS}
     do
@@ -69,6 +44,3 @@ for FILE in ${REPLACEMENTS}
         echo ""
     done
 
-echo "Configuring Suckless Terminal..."
-echo ""
-gsettings set org.gnome.desktop.default-applications.terminal exec 'stterm_launcher'
