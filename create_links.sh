@@ -61,7 +61,7 @@ for FILE in ${REPLACEMENTS}
 
         DESTDIR=$(dirname "${DESTINATION}")
         echo "Creating destination directory if missing: ${DESTDIR}"
-	mkdir -p "${DESTDIR}"
+        mkdir -p "${DESTDIR}"
 
         echo "Creating symbolic link: ${DESTINATION} -> ${SOURCE}"
         ln -sf "${SOURCE}" "${DESTINATION}"
