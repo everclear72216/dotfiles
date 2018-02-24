@@ -1,4 +1,5 @@
 # If you come from bash you might have to change your $PATH.
+export GPG_TTY=$(tty)
 export TERM=xterm-256color
 export XDG_CONFIG_HOME=$HOME/.config/
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
@@ -25,4 +26,3 @@ zstyle ':completion:complete:*:git:*' ignored-patterns 'check*-*'
 alias ll='ls -l'
 alias la='ls -all'
 
-alias git='GPG_TTY=$(tty) && git'
