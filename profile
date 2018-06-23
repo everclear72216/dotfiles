@@ -11,3 +11,5 @@ fi
 export SHELL=/bin/zsh
 export TERMINAL=stterm_launcher
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
