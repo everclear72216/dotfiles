@@ -2,7 +2,6 @@
 export GPG_TTY=$(tty)
 export TERM=xterm-256color
 export XDG_CONFIG_HOME=$HOME/.config/
-export PATH=$HOME/.local/bin:$HOME/.local/lib:/usr/local/bin:$PATH
 
 function powerline_precmd() {
 	PS1="$(powerline-shell --shell zsh $?)"
