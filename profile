@@ -8,8 +8,11 @@ if [ -d "$HOME/.local/lib" ]
         PATH="$HOME/.local/lib:$PATH"
 fi
 
+if [ -d "$HOME/.cargo/bin" ]
+    then
+        PATH="$HOME/.cargo/bin:$PATH"
+fi 
+
 export SHELL=/bin/zsh
 export TERMINAL=stterm_launcher
 
-
-export PATH="$HOME/.cargo/bin:$PATH"
