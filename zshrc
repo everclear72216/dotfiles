@@ -1,4 +1,7 @@
 # If you come from bash you might have to change your $PATH.
+
+powerline-daemon -q
+
 export GPG_TTY=$(tty)
 export TERM=xterm-256color
 export XDG_CONFIG_HOME=$HOME/.config/
