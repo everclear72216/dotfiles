@@ -160,7 +160,7 @@ hide_edge_borders both
 for_window [class="^.*"] border none
 
 # run compton for transparent windows
-exec --no-startup-id compton -r
+exec --no-startup-id compton -b
 
 # start powerline-lemonbar
 exec pllb
