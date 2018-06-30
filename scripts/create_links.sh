@@ -16,9 +16,6 @@ powerline-shell.json
 config/ranger/rc.conf
 config/i3status/config
 local/bin/stterm_launcher
-config/powerline/colors.json
-config/powerline/config.json
-config/powerline/colorschemes/myscheme.json
 local/share/applications/simple-terminal.desktop
 "
 
